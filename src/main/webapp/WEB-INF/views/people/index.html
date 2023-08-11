@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Все люди</title>
+</head>
+<body>
+<!--// мы проходимся циклом по коллекции people и записвыаем все объекты  в перменную person
+        далее мы выводим список объектов th:text = "${person.getName()}">user
+        и каждую из этих строк делаем ссылкой на конкретный объект по ID
+        <a th:href = "@{/people/{id}{id = person.getId}}" -->
+<div th:each="person : ${people}">
+    <a th:href="@{/people/{id}(id=${person.getId()})}"
+       th:text="${person.getName() + ', ' + person.getAge()}">user</a>
+</div>
+
+<br/>
+<hr/>
+
+<a href="/people/new">Create new person</a>
+
+</body>
+</html>
