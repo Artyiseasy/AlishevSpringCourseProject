@@ -23,7 +23,7 @@ import java.util.Objects;
 @Configuration
 @ComponentScan("ru.tarasov.springcourse")
 @EnableWebMvc
-@PropertySource("classpath:database.properties")
+@PropertySource("classpath:.properties.gitignore")
 public class SpringConfig implements WebMvcConfigurer {
 
     private final ApplicationContext applicationContext;
